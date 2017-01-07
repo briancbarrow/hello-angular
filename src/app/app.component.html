@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<h2>
+  {{test}}
+</h2>
+
+<layout-header
+  [name]="name"
+  (onNameChanged)="setName($event)">
+</layout-header>
+<div *ngFor="let char of name.split(''), let i = index">
+  {{ i }} - {{ char }}
+</div>
+<layout-header [name]="name"></layout-header>
