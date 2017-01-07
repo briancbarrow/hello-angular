@@ -1,5 +1,5 @@
 <h1>
-  {{title}}
+  {{title | capitalize:5 }}
 </h1>
 <h2>
   {{test}}
@@ -12,4 +12,22 @@
 <div *ngFor="let char of name.split(''), let i = index">
   {{ i }} - {{ char }}
 </div>
+
+<div [hidden]="name === 'Angular2'">
+  This will only show if name doesn't equal Angular2
+</div>
+<p boldHover>I turn bold when hovered</p>
 <layout-header [name]="name"></layout-header>
+<div *ngIf="name !== 'Angular2'" boldHover>
+  ngIf if name isn't Angular2
+</div>
+<div *ngIf="name !== 'Cookie Monster'" boldHover>
+  ngIf if name isn't Cookie Monster
+</div>
+<p *myUnless="name !== 'Angular2'">
+  myUnless(opposite of ngIf) if name isn't Angular2.
+</p>
+
+<p *myUnless="name !== 'Cookie Monster'">
+  myUnless(opposite of ngIf) if name isn't Cookie Monster
+</p>
