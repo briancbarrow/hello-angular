@@ -5,21 +5,18 @@
 <h2>
   {{test}}
 </h2>
-<div>This is the home page. Go to <a [routerLink]="['profile']">Brian's profile</a></div>
-<layout-header
-  [name]="name"
-  (onNameChanged)="setName($event)">
-</layout-header>
-<div *ngFor="let char of name.split(''), let i = index">
+<div>This is the home page. Go to <a [routerLink]="['profile']" routerLinkActive="active">Brian's profile</a></div>
+<layout-header></layout-header>
+<!-- <div *ngFor="let char of name.split(''), let i = index">
   {{ i }} - {{ char }}
-</div>
+</div> -->
 
 <div [hidden]="name === 'Angular2'">
   This will only show if name doesn't equal Angular2
 </div>
 <p boldHover>I turn bold when hovered</p>
-<layout-header [name]="name"></layout-header>
-<div *ngIf="name !== 'Angular2'" boldHover>
+<layout-header></layout-header>
+<!-- <div *ngIf="name !== 'Angular2'" boldHover>
   ngIf if name isn't Angular2
 </div>
 <div *ngIf="name !== 'Cookie Monster'" boldHover>
@@ -31,4 +28,4 @@
 
 <p *myUnless="name !== 'Cookie Monster'">
   myUnless(opposite of ngIf) if name isn't Cookie Monster
-</p>
+</p> -->

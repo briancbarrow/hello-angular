@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from './shared/shared.module'
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { UserService } from './shared/injectables/user.service'
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './shared/profile/profile.component';
@@ -42,7 +43,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([
     // FormsModule,
     // HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

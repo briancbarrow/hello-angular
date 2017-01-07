@@ -3,6 +3,7 @@ import { BoldHoverDirective } from './directives/bold-hover.directive'
 import { UnlessDirective } from './directives/unless.directive'
 import { CapitalizePipe } from './pipes/capitalize.pipe'
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +16,7 @@ export class AppComponent {
   title: string = 'app works!';
   test: string = 'This is a test';
   name: string = 'Angular2';
+
 
   setName(newName: string) {
     this.name = newName;

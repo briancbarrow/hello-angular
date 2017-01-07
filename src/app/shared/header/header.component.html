@@ -1,4 +1,4 @@
 <div>
-  <h2>Hello {{name}}</h2>
+  <h2>Hello {{profile | json}}</h2>
 </div>
-<button (click)="changeName('Cookie Monster')">Change Name</button>
+<button (click)="loadUser()">Change User</button>
