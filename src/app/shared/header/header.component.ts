@@ -14,6 +14,4 @@ export class HeaderComponent {
  changeName(newName: string) {
    this.onNameChanged.emit(newName);
  }
-
-
 }
